@@ -6,7 +6,7 @@ Resources:
     Properties:
       SecurityGroups:
         - !Ref InstanceSecurityGroup    
-      KeyName: udacity_key.pem
+      KeyName: udacity_key
       ImageId: 'ami-052efd3df9dad4825' 
       InstanceType: t2.micro
 
@@ -16,6 +16,6 @@ Resources:
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
+          FromPort: 22
+          ToPort: 22
           CidrIp: 0.0.0.0/0 
